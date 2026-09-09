@@ -1,3 +1,4 @@
+#I-22_Mykola-Kitsia
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -6,11 +7,9 @@
     <title>Замовлення товару</title>
 </head>
 <body>
-
     <h1>Замовлення товару</h1>
 
-    <form>
-
+   <form>
         <label for="name">Ім'я покупця</label>
         <input
             type="text"
@@ -20,9 +19,8 @@
             required
         >
 
-        <br><br>
-
-        <label for="surname">Прізвище</label>
+   <br><br>
+    <label for="surname">Прізвище</label>
         <input
             type="text"
             id="surname"
@@ -30,10 +28,8 @@
             placeholder="Введіть прізвище"
             required
         >
-
-        <br><br>
-
-        <label for="email">Електронна пошта</label>
+    <br><br>
+   <label for="email">Електронна пошта</label>
         <input
             type="email"
             id="email"
@@ -42,9 +38,8 @@
             required
         >
 
-        <br><br>
-
-        <label for="phone">Номер телефону</label>
+   <br><br>
+   <label for="phone">Номер телефону</label>
         <input
             type="tel"
             id="phone"
@@ -53,9 +48,8 @@
             required
         >
 
-        <br><br>
-
-        <label for="quantity">Кількість товару</label>
+   <br><br>
+    <label for="quantity">Кількість товару</label>
         <input
             type="number"
             id="quantity"
@@ -64,9 +58,8 @@
             max="10"
         >
 
-        <br><br>
-
-        <label for="address">Адреса доставки</label>
+   <br><br>
+    <label for="address">Адреса доставки</label>
         <input
             type="text"
             id="address"
@@ -75,52 +68,48 @@
             minlength="10"
         >
 
-        <br><br>
+  <br><br>
 
-        <p>Спосіб доставки:</p>
+   <p>Спосіб доставки:</p>
 
-        <input type="radio" name="delivery" value="pickup" required>
+   <input type="radio" name="delivery" value="pickup" required>
         Самовивіз
 
-        <input type="radio" name="delivery" value="postomat">
+  <input type="radio" name="delivery" value="postomat">
         Поштомат
 
-        <input type="radio" name="delivery" value="courier">
+   <input type="radio" name="delivery" value="courier">
         Кур'єр
 
-        <br><br>
+   <br><br>
 
-        <p>Додаткові параметри:</p>
+   <p>Додаткові параметри:</p>
 
-        <input type="checkbox" name="gift" value="gift">
+  <input type="checkbox" name="gift" value="gift">
         Подарункова упаковка
 
-        <input type="checkbox" name="warranty" value="warranty">
+   <input type="checkbox" name="warranty" value="warranty">
         Додаткова гарантія
 
-        <input type="checkbox" name="sms" value="sms">
+   <input type="checkbox" name="sms" value="sms">
         SMS-повідомлення
-
-        <input type="checkbox" name="call" value="call">
+    <input type="checkbox" name="call" value="call">
         Телефонний дзвінок перед доставкою
+    <br><br>
 
-        <br><br>
+  <label for="payment">Спосіб оплати</label>
 
-        <label for="payment">Спосіб оплати</label>
-
-        <select name="payment" id="payment">
+   <select name="payment" id="payment">
             <option value="card">Оплата карткою</option>
             <option value="cash">Оплата при отриманні</option>
             <option value="bank">Банківський переказ</option>
         </select>
+    <br><br>
+    <label for="comment">Коментар до замовлення</label>
 
-        <br><br>
+   <br>
 
-        <label for="comment">Коментар до замовлення</label>
-
-        <br>
-
-        <textarea
+ <textarea
             name="comment"
             id="comment"
             cols="50"
@@ -129,12 +118,12 @@
             placeholder="Введіть коментар"
         ></textarea>
 
-        <br><br>
+   <br><br>
 
-        <button type="submit">Відправити</button>
+  <button type="submit">Відправити</button>
         <button type="reset">Очистити</button>
 
-    </form>
+</form>
 
 </body>
 </html>
