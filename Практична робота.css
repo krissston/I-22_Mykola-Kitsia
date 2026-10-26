@@ -1,0 +1,106 @@
+/* Загальні стилі сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Сітка галереї */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Елемент галереї */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
+    /* Вимога 3: Плавна поява сторінки / елементів при завантаженні */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Стилі зображень */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    
+    /* Вимога 1 та 2: Плавний перехід для трансформацій (збільшення та поворот) */
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Ефект при наведенні (:hover) */
+.gallery-item img:hover {
+    /* Збільшення зображення (scale) та легкий поворот (rotate) */
+    transform: scale(1.1) rotate(3deg);
+    filter: brightness(1.05);
+}
+
+/* Вимога 3: Ключові кадри для появи при завантаженні (@keyframes) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Вимога 4: Нескінченна анімація руху для декоративного елемента */
+.decorative-element {
+    position: absolute;
+    top: 30px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.6);
+    
+    /* Запуск нескінченної анімації */
+    animation: moveAcross 8s linear infinite;
+}
+
+@keyframes moveAcross {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(calc(100vw + 40px)) translateY(30px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
