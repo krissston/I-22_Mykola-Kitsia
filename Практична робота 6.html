@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Результати навчання студентів</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        td:first-child, th:first-child {
+            text-align: left;
+        }
+        tfoot td {
+            font-weight: bold;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Результати навчання студентів</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Студент</th>
+                <th colspan="2">Практичні роботи</th>
+                <th rowspan="2">Тест</th>
+                <th rowspan="2">Підсумкова оцінка</th>
+            </tr>
+            <tr>
+                <th>Практична робота №1</th>
+                <th>Практична робота №2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ковальчук Олександр</td>
+                <td>10</td>
+                <td>10</td>
+                <td>11</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Петренко Марія</td>
+                <td colspan="2">9</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Сидоренко Іван</td>
+                <td>11</td>
+                <td>12</td>
+                <td>10</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Мельник Анна</td>
+                <td>8</td>
+                <td>7</td>
+                <td>9</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Шевченко Дмитро</td>
+                <td>12</td>
+                <td>11</td>
+                <td>12</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Кількість студентів: 5</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
