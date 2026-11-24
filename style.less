@@ -1,0 +1,79 @@
+@primary-color: #3498db;
+@accent-color: #2ecc71;
+@bg-color: #f4f6f7;
+@text-color: #333;
+@card-bg: #fff;
+@radius: 8px;
+@spacing: 20px;
+
+.button-style(@bg, @radius-val) {
+    background-color: @bg;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: @radius-val;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken(@bg, 10%);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: @bg-color;
+    color: @text-color;
+    margin: 0;
+    padding: @spacing;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: (@spacing * 1.5);
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: @spacing;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: @card-bg;
+    border-radius: @radius;
+    padding: @spacing;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-top: 0;
+        color: @primary-color;
+    }
+
+    &__desc {
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+    &__price {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        .button-style(@accent-color, @radius);
+    }
+}
